@@ -11,11 +11,15 @@ public class BubbleSort
             {
                 if (arr[j] > arr[j + 1])
                 {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    swap(arr, j+1, j);
                 }
             }
         }
+    }
+    public static void swap(int []arr, int i, int j)
+    {
+        int temp = arr[j];
+        arr[j] = arr[i];
+        arr[i] = temp;
     }
 }
